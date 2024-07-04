@@ -60,6 +60,7 @@
 	  <None Remove="Resources\Images\add.png" />
 	  <None Remove="Resources\Images\baggage.png" />
 	  <None Remove="Resources\Images\bell.png" />
+	  <None Remove="Resources\Images\document.png" />
 	  <None Remove="Resources\Images\expenses.png" />
 	  <None Remove="Resources\Images\eye.png" />
 	  <None Remove="Resources\Images\home.png" />

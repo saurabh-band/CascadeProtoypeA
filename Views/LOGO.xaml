@@ -3,17 +3,49 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CascadeProtoypeA.Views.LOGO"
              Title="LOGO"
-             Shell.TitleColor="White"
              Shell.NavBarIsVisible="False"
              BackgroundColor="White">
-    <StackLayout>
+    <VerticalStackLayout>
         <Label 
             Text="LOGO"
-            FontSize="Header"
+            FontSize="Title"
             BackgroundColor="Gray"
             TextColor="White"
             FontAttributes="Bold"
-            VerticalOptions="CenterAndExpand" 
-            HorizontalOptions="CenterAndExpand" />
-    </StackLayout>
+            VerticalOptions="FillAndExpand" 
+            HorizontalOptions="FillAndExpand"
+            HorizontalTextAlignment="Center"
+            VerticalTextAlignment="Center"
+            HeightRequest="50"/>
+        <Grid ColumnDefinitions="Auto, *">
+            <Border Grid.Column="0"
+                    HeightRequest="80" 
+                    WidthRequest="80"
+                    StrokeShape="RoundRectangle 80,80,80,80"
+                    HorizontalOptions="Start"
+                    StrokeThickness="2"
+                    Margin="15">
+                <Image Source="dotnet_bot.png" Aspect="AspectFit" HeightRequest="80" WidthRequest="80" />
+            </Border>
+            <Label Grid.Column="1" Text="Hello, Rose!" TextColor="Black" VerticalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="Title"/>
+        </Grid>
+        <StackLayout Margin="15">
+            <Border HeightRequest="100"
+                    StrokeShape="RoundRectangle 10,10,10,10"
+                    StrokeThickness="1">
+                <Grid ColumnDefinitions="Auto,*,Auto,Auto">
+                    <Image Grid.Column="0" Source="leave.png" Aspect="AspectFit" HeightRequest="80" WidthRequest="80"  Margin="5"/>
+                    <StackLayout Grid.Column="1" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Margin="5">
+                        <Label Text="Absence" TextColor="Black" FontSize="Title" FontAttributes="Bold"/>
+                        <Label Text="12.5 Dyas Remaining" TextColor="Black" FontSize="Default" FontAttributes="Bold"/>
+                        <Label Text="{Binding clickTotal}" TextColor="Black" FontSize="Default" FontAttributes="Bold"/>
+                    </StackLayout>
+                    <Line Grid.Column="2" Stroke="Gray" Y2="80" VerticalOptions="CenterAndExpand"/>
+                    <ImageButton Grid.Column="3" Source="add.png" Aspect="AspectFit" HeightRequest="50" WidthRequest="50" Margin="5" Clicked="OnImageButtonClicked" HorizontalOptions="Fill"/>
+                </Grid>
+            </Border>
+        </StackLayout>
+            
+
+    </VerticalStackLayout>
 </ContentPage>
