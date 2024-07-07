@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CascadeProtoypeA.ViewModels"
+             x:Class="CascadeProtoypeA.Views.DirectoryDemo2"
+             Title="DirectoryDemo2"
+             BackgroundColor="White">
+    <ContentPage.BindingContext>
+        <local:SoretdContactViewModel />
+    </ContentPage.BindingContext>
+
+    <StackLayout Padding="10">
+        <SearchBar Placeholder="Search" Text="{Binding SearchQuery, Mode=TwoWay}" TextColor="Black" BackgroundColor="LightSkyBlue"/>
+        <ListView x:Name="ContactsListView"
+                  ItemsSource="{Binding ContactsGrouped}"
+                  IsGroupingEnabled="True"
+                  GroupDisplayBinding="{Binding Initial}"
+                  HasUnevenRows="True">
+            <ListView.GroupHeaderTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Label Text="{Binding Initial}" 
+                               TextColor="Black"
+                               FontSize="Medium" 
+                               FontAttributes="Bold" 
+                               BackgroundColor="LightGray"
+                               Padding="5" />
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.GroupHeaderTemplate>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="10">
+                            <Image Source="{Binding ImageUrl}" WidthRequest="40" HeightRequest="40" />
+                            <StackLayout Orientation="Vertical" Padding="10,0">
+                                <Label Text="{Binding Name}" FontSize="Medium" FontAttributes="Bold" TextColor="Black"/>
+                                <Label Text="{Binding Email}" FontSize="Small" TextColor="Gray" />
+                                <Label Text="{Binding Phone}" FontSize="Small" TextColor="Gray" />
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

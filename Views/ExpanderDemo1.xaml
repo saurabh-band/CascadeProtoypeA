@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:exp="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="CascadeProtoypeA.Views.ExpanderDemo1"
+             Title="Company Handbook"
+             BackgroundColor="White"
+             Shell.TitleColor="Black">
+    <VerticalStackLayout>
+        <exp:Expander x:Name="MyExpander">
+            <exp:Expander.Header>
+                <Grid ColumnDefinitions="Auto,*" Padding="10">
+                    <Image Grid.Column="0" x:Name="HeaderImage" HeightRequest="30" WidthRequest="30" Source="downarrow.png">
+                        <Image.Triggers>
+                            <DataTrigger TargetType="Image"
+                                         Binding="{Binding Source={x:Reference MyExpander}, Path=IsExpanded}"
+                                         Value="True">
+                                <Setter Property="Rotation"
+                                        Value="180"/>
+                            </DataTrigger>
+                        </Image.Triggers>
+                    </Image>
+                    <Label Grid.Column="1" Text="Tap Me" TextColor="Black" FontAttributes="Bold" FontSize="Medium" VerticalOptions="Center" Padding="10"/>
+                </Grid>
+            </exp:Expander.Header>
+            <exp:Expander.Content >
+                <StackLayout Padding="20,0,0,0">
+                    <exp:Expander x:Name="MyExpander1">
+                        <exp:Expander.Header>
+                            <Grid ColumnDefinitions="Auto,*" Padding="10">
+                                <Image Grid.Column="0" x:Name="HeaderImage1" HeightRequest="30" WidthRequest="30" Source="downarrow.png">
+                                    <Image.Triggers>
+                                        <DataTrigger TargetType="Image"
+                                                 Binding="{Binding Source={x:Reference MyExpander1}, Path=IsExpanded}"
+                                                 Value="True">
+                                            <Setter Property="Rotation"
+                                                Value="180"/>
+                                        </DataTrigger>
+                                    </Image.Triggers>
+                                </Image>
+                                <Label Grid.Column="1" Text="Tap Me" TextColor="Black" FontAttributes="Bold" FontSize="Medium" VerticalOptions="Center" Padding="10"/>
+                            </Grid>
+                        </exp:Expander.Header>
+                        <exp:Expander.Content>
+                            <StackLayout Padding="20,0,0,0">
+                                <exp:Expander x:Name="MyExpander2">
+                                    <exp:Expander.Header>
+                                        <Grid ColumnDefinitions="Auto,*" Padding="10">
+                                            <Image Grid.Column="0" x:Name="HeaderImage2" HeightRequest="30" WidthRequest="30" Source="downarrow.png">
+                                                <Image.Triggers>
+                                                    <DataTrigger TargetType="Image"
+                                                         Binding="{Binding Source={x:Reference MyExpander2}, Path=IsExpanded}"
+                                                         Value="True">
+                                                        <Setter Property="Rotation"
+                                                        Value="180"/>
+                                                    </DataTrigger>
+                                                </Image.Triggers>
+                                            </Image>
+                                            <Label Grid.Column="1" Text="Tap Me" TextColor="Black" FontAttributes="Bold" FontSize="Medium" VerticalOptions="Center" Padding="10"/>
+                                        </Grid>
+                                    </exp:Expander.Header>
+                                    <exp:Expander.Content>
+                                        <StackLayout Padding="60,10,10,10">
+                                            <Label Text="Text 1" TextColor="Black" FontSize="Medium"/>
+                                            <Label Text="Text 2" TextColor="Black" FontSize="Medium"/>
+                                        </StackLayout>
+                                    </exp:Expander.Content>
+                                </exp:Expander>
+                            </StackLayout>
+                        </exp:Expander.Content>
+                    </exp:Expander>
+                </StackLayout>
+            </exp:Expander.Content>
+        </exp:Expander>
+    </VerticalStackLayout>
+</ContentPage>

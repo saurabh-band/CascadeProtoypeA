@@ -13,17 +13,21 @@
              Icon="home.png">
             <ShellContent ContentTemplate="{DataTemplate views:LOGO}"/>
         </Tab>
-        <Tab Title="LOGO"
+        <Tab Title="Company Handbook"
              Icon="baggage.png">
-            <ShellContent ContentTemplate="{DataTemplate views:LOGO}"/>
+            <ShellContent ContentTemplate="{DataTemplate views:ExpanderDemo1}"/>
         </Tab>
-        <Tab Title="LOGO"
+        <Tab Title="Company Directory"
+             Icon="baggage.png">
+            <ShellContent ContentTemplate="{DataTemplate views:DirectoryDemo1}"/>
+        </Tab>
+        <Tab Title="Notifications"
              Icon="bell.png">
-            <ShellContent ContentTemplate="{DataTemplate views:LOGO}"/>
+            <ShellContent ContentTemplate="{DataTemplate views:DirectoryDemo2}"/>
         </Tab>
-        <Tab Title="LOGO"
+        <Tab Title="My Details"
              Icon="person.png">
-            <ShellContent ContentTemplate="{DataTemplate views:LOGO}"/>
+            <ShellContent ContentTemplate="{DataTemplate views:Contacts}"/>
         </Tab>
     </TabBar>
 

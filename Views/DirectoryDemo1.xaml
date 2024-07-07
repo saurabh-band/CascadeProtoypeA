@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CascadeProtoypeA.Views.DirectoryDemo1"
+             xmlns:local="clr-namespace:CascadeProtoypeA.ViewModels"
+             Title="DirectoryDemo1"
+             BackgroundColor="White">
+    <ContentPage.BindingContext>
+        <local:ContactViewModel />
+    </ContentPage.BindingContext>
+
+    <StackLayout Padding="10">
+
+        <!-- Search Bar -->
+        <SearchBar Placeholder="Search" Text="{Binding SearchQuery}" TextColor="Black" PlaceholderColor="Black" BackgroundColor="Wheat"/>
+
+        <!-- Contacts List -->
+        <CollectionView ItemsSource="{Binding FilteredContacts}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Orientation="Horizontal" Padding="10">
+                        <Image Source="{Binding ImageUrl}" WidthRequest="50" HeightRequest="50" Aspect="AspectFill" />
+                        <StackLayout Orientation="Vertical" Padding="10,0">
+                            <Label Text="{Binding Name}" FontAttributes="Bold" FontSize="Medium"  TextColor="Black"/>
+                            <Label Text="{Binding Email}" FontSize="Small" TextColor="Black"/>
+                            <Label Text="{Binding Phone}" FontSize="Small" TextColor="Black"/>
+                        </StackLayout>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+    </StackLayout>
+
+</ContentPage>

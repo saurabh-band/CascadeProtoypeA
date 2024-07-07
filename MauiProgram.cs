@@ -1,4 +1,7 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using CommunityToolkit.Maui;
+using CommunityToolkit.Maui.Core;
+using CommunityToolkit.Maui.Markup;
+using Microsoft.Extensions.Logging;
 
 namespace CascadeProtoypeA
 {
@@ -7,8 +10,13 @@ namespace CascadeProtoypeA
         public static MauiApp CreateMauiApp()
         {
             var builder = MauiApp.CreateBuilder();
+            //builder.UseMauiApp<App>().UseMauiCommunityToolkitCore();
+            //builder.UseMauiApp<App>().UseMauiCommunityToolkitMarkup();
             builder
                 .UseMauiApp<App>()
+                .UseMauiCommunityToolkit()
+                .UseMauiCommunityToolkitCore()
+                .UseMauiCommunityToolkitMarkup()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
