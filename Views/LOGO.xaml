@@ -17,7 +17,7 @@
             HorizontalTextAlignment="Center"
             VerticalTextAlignment="Center"
             HeightRequest="50"/>
-        <Grid Grid.Row="1" ColumnDefinitions="Auto, *">
+        <Grid Grid.Row="1" ColumnDefinitions="Auto, *" BackgroundColor="LightGrey">
             <Border Grid.Column="0"
                     HeightRequest="80" 
                     WidthRequest="80"

@@ -74,6 +74,9 @@
 	  <None Remove="Resources\Images\team.png" />
 	  <None Remove="Resources\Images\time.png" />
 	  <None Remove="Resources\Images\user.png" />
+	  <None Remove="Resources\Raw\file-sample_00kB.doc" />
+	  <None Remove="Resources\Raw\file-sample_100kB.docx" />
+	  <None Remove="Resources\Raw\Get_Started_With_Smallpdf.pdf" />
 	</ItemGroup>
 
 	<ItemGroup>

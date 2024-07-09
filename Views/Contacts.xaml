@@ -9,14 +9,16 @@
         <local:ContactsViewModel />
     </ContentPage.BindingContext>
 
-    <Grid>
+    <Grid RowDefinitions="Auto,*">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="30" />
         </Grid.ColumnDefinitions>
-
-        <StackLayout Padding="10">
-            <SearchBar Placeholder="Search" Text="{Binding SearchQuery, Mode=TwoWay}" TextColor="Black" BackgroundColor="LightSkyBlue" Margin="5"/>
+        
+        <SearchBar Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Placeholder="Search" Text="{Binding SearchQuery, Mode=TwoWay}" 
+                   TextColor="Black" BackgroundColor="LightSkyBlue" Margin="10,10,10,0"/>
+        
+        <StackLayout Grid.Row="1" Padding="10">
             <ListView x:Name="ContactsListView"
                       ItemsSource="{Binding ContactsGrouped}"
                       IsGroupingEnabled="True"
@@ -50,7 +52,8 @@
                 </ListView.ItemTemplate>
             </ListView>
         </StackLayout>
-        <CollectionView Grid.Column="1"
+        <CollectionView Grid.Row="1"
+                        Grid.Column="1"
                         VerticalOptions="CenterAndExpand"
                         ItemsSource="{Binding Alphabet}" 
                         SelectionMode="Single"
@@ -59,7 +62,7 @@
             <CollectionView.ItemTemplate>
                 <!--<Frame Padding="5" Margin="0" BackgroundColor="LightGray" BorderColor="DarkGray">-->
                 <DataTemplate>
-                    <Label Text="{Binding .}" FontSize="Small" HorizontalOptions="Center" TextColor="DarkBlue" />
+                    <Label Text="{Binding .}" FontSize="Small" HorizontalOptions="Center" TextColor="Blue" />
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
