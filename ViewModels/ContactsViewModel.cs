@@ -16,7 +16,7 @@ namespace CascadeProtoypeA.ViewModels
     {
         private string searchQuery;
         public ObservableCollection<ContactGroup> ContactsGrouped { get; set; }
-        public ObservableCollection<string> Alphabet { get; set; }
+        public ObservableCollection<string> AvailableInitials { get; set; }
         private ObservableCollection<Contact> allContacts;
 
         public string SearchQuery
@@ -34,6 +34,7 @@ namespace CascadeProtoypeA.ViewModels
 
         public ContactsViewModel()
         {
+            // Initialize contacts
             allContacts = new ObservableCollection<Contact>
         {
             new Contact { Name = "Genevieve Adams", Email = "genevieve.adams@company.com", Phone = "0161 637 3758 (2479)", ImageUrl = "person.png" },
@@ -49,7 +50,7 @@ namespace CascadeProtoypeA.ViewModels
         };
 
             ContactsGrouped = new ObservableCollection<ContactGroup>();
-            Alphabet = new ObservableCollection<string>("ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray().Select(c => c.ToString()));
+            AvailableInitials = new ObservableCollection<string>();
 
             FilterAndGroupContacts();
         }
@@ -95,11 +96,19 @@ namespace CascadeProtoypeA.ViewModels
                 ContactsGrouped.Clear();
                 foreach (var group in groupedContacts)
                 {
-                    //Debug.WriteLine($"Adding group {group.Initial} with {group.Count} contacts");
+                    Debug.WriteLine($"Adding group {group.Initial} with {group.Count} contacts");
                     ContactsGrouped.Add(group);
                 }
 
+                // Update AvailableInitials based on grouped contacts
+                AvailableInitials.Clear();
+                foreach (var group in groupedContacts)
+                {
+                    AvailableInitials.Add(group.Initial);
+                }
+
                 OnPropertyChanged(nameof(ContactsGrouped));
+                OnPropertyChanged(nameof(AvailableInitials));
             }
             catch (ArgumentOutOfRangeException ex)
             {

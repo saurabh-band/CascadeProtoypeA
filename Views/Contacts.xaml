@@ -14,7 +14,7 @@
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="30" />
         </Grid.ColumnDefinitions>
-        
+
         <SearchBar Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Placeholder="Search" Text="{Binding SearchQuery, Mode=TwoWay}" 
                    TextColor="Black" BackgroundColor="LightSkyBlue" Margin="10,10,10,0"/>
         
@@ -29,7 +29,6 @@
                         <ViewCell>
                             <Label Text="{Binding Initial}" 
                                    FontSize="Medium" 
-                                   TextColor="Black"
                                    FontAttributes="Bold" 
                                    BackgroundColor="LightGray"
                                    Padding="5" />
@@ -52,17 +51,18 @@
                 </ListView.ItemTemplate>
             </ListView>
         </StackLayout>
+
         <CollectionView Grid.Row="1"
                         Grid.Column="1"
                         VerticalOptions="CenterAndExpand"
-                        ItemsSource="{Binding Alphabet}" 
+                        ItemsSource="{Binding AvailableInitials}" 
                         SelectionMode="Single"
-                        SelectionChanged="OnAlphabetSelected"
-                        VerticalScrollBarVisibility="Always">
+                        SelectionChanged="OnInitialSelected">
             <CollectionView.ItemTemplate>
-                <!--<Frame Padding="5" Margin="0" BackgroundColor="LightGray" BorderColor="DarkGray">-->
                 <DataTemplate>
-                    <Label Text="{Binding .}" FontSize="Small" HorizontalOptions="Center" TextColor="Blue" />
+                    <!--<Frame Padding="5" Margin="0" BackgroundColor="LightGray" BorderColor="DarkGray">-->
+                        <Label Text="{Binding}" FontSize="Small" HorizontalOptions="Center" Padding="5" TextColor="Blue"/>
+                    <!--</Frame>-->
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
