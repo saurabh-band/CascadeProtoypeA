@@ -16,7 +16,7 @@
             <ShellContent ContentTemplate="{DataTemplate views:ExpanderDemo1}"/>
         </Tab>
         <Tab Icon="bell.png">
-            <ShellContent ContentTemplate="{DataTemplate views:DirectoryDemo2}"/>
+            <ShellContent ContentTemplate="{DataTemplate views:JumpListPage}"/>
         </Tab>
         <Tab Icon="person.png">
             <ShellContent ContentTemplate="{DataTemplate views:Contacts}"/>
