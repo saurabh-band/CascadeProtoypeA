@@ -17,7 +17,7 @@ namespace CascadeProtoypeA.ViewModels
         private string searchQuery;
         public ObservableCollection<ContactGroup> ContactsGrouped { get; set; }
         public ObservableCollection<string> AvailableInitials { get; set; }
-        private ObservableCollection<Contact> allContacts;
+        private readonly ObservableCollection<Contact> allContacts;
 
         public string SearchQuery
         {

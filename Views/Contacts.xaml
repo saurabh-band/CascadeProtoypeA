@@ -8,63 +8,65 @@
     <ContentPage.BindingContext>
         <local:ContactsViewModel />
     </ContentPage.BindingContext>
-
-    <Grid RowDefinitions="Auto,*">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="30" />
-        </Grid.ColumnDefinitions>
+    
+    <Grid Grid.Row="0" RowDefinitions="Auto,*,Auto">
 
         <SearchBar Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Placeholder="Search" Text="{Binding SearchQuery, Mode=TwoWay}" 
                    TextColor="Black" BackgroundColor="LightSkyBlue" Margin="10,10,10,0"/>
         
-        <StackLayout Grid.Row="1" Padding="10">
-            <ListView x:Name="ContactsListView"
+        <Grid Grid.Row="1" ColumnDefinitions="*,30">
+            <StackLayout Grid.Column="0" Padding="10">
+                <ListView x:Name="ContactsListView"
                       ItemsSource="{Binding ContactsGrouped}"
                       IsGroupingEnabled="True"
                       GroupDisplayBinding="{Binding Initial}"
                       HasUnevenRows="True">
-                <ListView.GroupHeaderTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <Label Text="{Binding Initial}" 
+                    <ListView.GroupHeaderTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Label Text="{Binding Initial}" 
                                    FontSize="Medium" 
                                    FontAttributes="Bold" 
                                    BackgroundColor="LightGray"
                                    Padding="5" />
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.GroupHeaderTemplate>
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <StackLayout Orientation="Horizontal" Padding="10">
-                                <Image Source="{Binding ImageUrl}" WidthRequest="40" HeightRequest="40" />
-                                <StackLayout Orientation="Vertical" Padding="10,0">
-                                    <Label Text="{Binding Name}" FontSize="Medium" TextColor="Black"/>
-                                    <Label Text="{Binding Email}" FontSize="Small" TextColor="Gray" />
-                                    <Label Text="{Binding Phone}" FontSize="Small" TextColor="Gray" />
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.GroupHeaderTemplate>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" Padding="10">
+                                    <Image Source="{Binding ImageUrl}" WidthRequest="40" HeightRequest="40" />
+                                    <StackLayout Orientation="Vertical" Padding="10,0">
+                                        <Label Text="{Binding Name}" FontSize="Medium" TextColor="Black"/>
+                                        <Label Text="{Binding Email}" FontSize="Small" TextColor="Gray" />
+                                        <Label Text="{Binding Phone}" FontSize="Small" TextColor="Gray" />
+                                    </StackLayout>
                                 </StackLayout>
-                            </StackLayout>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-        </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
 
-        <CollectionView Grid.Row="1"
-                        Grid.Column="1"
+            <CollectionView Grid.Column="1"
                         VerticalOptions="CenterAndExpand"
                         ItemsSource="{Binding AvailableInitials}" 
                         SelectionMode="Single"
                         SelectionChanged="OnInitialSelected">
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <!--<Frame Padding="5" Margin="0" BackgroundColor="LightGray" BorderColor="DarkGray">-->
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <!--<Frame Padding="5" Margin="0" BackgroundColor="LightGray" BorderColor="DarkGray">-->
                         <Label Text="{Binding}" FontSize="Small" HorizontalOptions="Center" Padding="5" TextColor="Blue"/>
-                    <!--</Frame>-->
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
+                        <!--</Frame>-->
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Grid>
+        
+        <Grid Grid.Row="2"
+              ColumnDefinitions="0.25*,0.25*,0.25*,0.25*">
+            <Line Grid.Column="3" Stroke="Blue" X2="100" Aspect="Fill" StrokeThickness="3" VerticalOptions="FillAndExpand"/>
+        </Grid>
     </Grid>
 </ContentPage>

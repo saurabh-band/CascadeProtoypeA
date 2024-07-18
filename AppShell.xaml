@@ -8,17 +8,20 @@
     BackgroundColor="Gray"
     Title="CascadeProtoypeA">
 
-    <TabBar Shell.TabBarForegroundColor="LightSkyBlue">
-        <Tab Icon="home.png">
+    <TabBar Shell.TabBarForegroundColor="Blue">
+        <Tab Title="Home" Icon="home.png">
             <ShellContent ContentTemplate="{DataTemplate views:LOGO}"/>
         </Tab>
-        <Tab Icon="baggage.png">
+        <Tab    Title="Handbook" 
+            Icon="baggage.png">
             <ShellContent ContentTemplate="{DataTemplate views:ExpanderDemo1}"/>
         </Tab>
-        <Tab Icon="bell.png">
+        <Tab Title="Directory"
+             Icon="bell.png">
             <ShellContent ContentTemplate="{DataTemplate views:JumpListPage}"/>
         </Tab>
-        <Tab Icon="person.png">
+        <Tab Title="Directory" 
+            Icon="person.png">
             <ShellContent ContentTemplate="{DataTemplate views:Contacts}"/>
         </Tab>
     </TabBar>

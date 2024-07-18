@@ -6,7 +6,7 @@
              Title="JumpListPage"
              BackgroundColor="White">
 
-    <Grid RowDefinitions="auto,*" BackgroundColor="{StaticResource c266}">
+    <Grid RowDefinitions="auto,*,Auto" BackgroundColor="{StaticResource c266}">
         <VerticalStackLayout Grid.Row="0" Margin="0,0,0,20">
             <Label Text="Jump List" VerticalOptions="Center" HorizontalOptions="Center"></Label>
         </VerticalStackLayout>
@@ -52,6 +52,9 @@
 
             <Grid Padding="{OnPlatform Android='0,0,6,0', iOS='0,0,4,0'}" x:Name="GridAlphabetList" VerticalOptions="CenterAndExpand" HorizontalOptions="End">
             </Grid>
+        </Grid>
+        <Grid Grid.Row="2" ColumnDefinitions="0.25*,0.25*,0.25*,0.25*">
+            <Line Grid.Column="2" Stroke="Blue" X2="100" Aspect="Fill" StrokeThickness="3   " VerticalOptions="FillAndExpand"/>
         </Grid>
     </Grid>
 </ContentPage>

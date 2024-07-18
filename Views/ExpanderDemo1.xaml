@@ -6,251 +6,257 @@
              Title="Company Handbook"
              BackgroundColor="White"
              Shell.TitleColor="Black">
-    <ScrollView Orientation="Both">
-        <StackLayout>
-            <exp:Expander x:Name="MyExpander">
-                <exp:Expander.Header>
-                    <Grid ColumnDefinitions="Auto,*" Padding="10,0,0,0">
-                        <Image Grid.Column="0" x:Name="HeaderImage" HeightRequest="30" WidthRequest="30" Source="downarrow.png">
-                            <Image.Triggers>
-                                <DataTrigger TargetType="Image"
+    <Grid RowDefinitions="*,Auto">
+        <ScrollView Grid.Row="0" Orientation="Both">
+            <StackLayout>
+                <exp:Expander x:Name="MyExpander">
+                    <exp:Expander.Header>
+                        <Grid ColumnDefinitions="Auto,*" Padding="10,0,0,0">
+                            <Image Grid.Column="0" x:Name="HeaderImage" HeightRequest="30" WidthRequest="30" Source="downarrow.png">
+                                <Image.Triggers>
+                                    <DataTrigger TargetType="Image"
                                          Binding="{Binding Source={x:Reference MyExpander}, Path=IsExpanded}"
                                          Value="True">
-                                    <Setter Property="Rotation"
+                                        <Setter Property="Rotation"
                                         Value="180"/>
-                                </DataTrigger>
-                            </Image.Triggers>
-                        </Image>
-                        <Label Grid.Column="1" Text="Employment Basics" TextColor="Black" FontAttributes="Bold" FontSize="Medium" VerticalOptions="Center" Padding="10"/>
-                    </Grid>
-                </exp:Expander.Header>
-                <exp:Expander.Content >
-                    <StackLayout Padding="20,0,0,0">
+                                    </DataTrigger>
+                                </Image.Triggers>
+                            </Image>
+                            <Label Grid.Column="1" Text="Employment Basics" TextColor="Black" FontAttributes="Bold" FontSize="Medium" VerticalOptions="Center" Padding="10"/>
+                        </Grid>
+                    </exp:Expander.Header>
+                    <exp:Expander.Content >
+                        <StackLayout Padding="20,0,0,0">
 
-                        <exp:Expander x:Name="MyExpander1" IsEnabled="False">
-                            <exp:Expander.Header>
-                                <Grid ColumnDefinitions="Auto,*" Padding="10,0,0,0">
-                                    <Image Grid.Column="0" x:Name="HeaderImage1" HeightRequest="30" WidthRequest="30" Source="downarrow.png">
-                                        <Image.Triggers>
-                                            <DataTrigger TargetType="Image"
+                            <exp:Expander x:Name="MyExpander1" IsEnabled="False">
+                                <exp:Expander.Header>
+                                    <Grid ColumnDefinitions="Auto,*" Padding="10,0,0,0">
+                                        <Image Grid.Column="0" x:Name="HeaderImage1" HeightRequest="30" WidthRequest="30" Source="downarrow.png">
+                                            <Image.Triggers>
+                                                <DataTrigger TargetType="Image"
                                                  Binding="{Binding Source={x:Reference MyExpander1}, Path=IsExpanded}"
                                                  Value="True">
-                                                <Setter Property="Rotation"
+                                                    <Setter Property="Rotation"
                                                 Value="180"/>
-                                            </DataTrigger>
-                                        </Image.Triggers>
-                                    </Image>
-                                    <Label Grid.Column="1" Text="Employment Contract Type" TextColor="Black" FontAttributes="Bold" FontSize="Medium" VerticalOptions="Center" Padding="10"/>
-                                </Grid>
-                            </exp:Expander.Header>
-                        </exp:Expander>
+                                                </DataTrigger>
+                                            </Image.Triggers>
+                                        </Image>
+                                        <Label Grid.Column="1" Text="Employment Contract Type" TextColor="Black" FontAttributes="Bold" FontSize="Medium" VerticalOptions="Center" Padding="10"/>
+                                    </Grid>
+                                </exp:Expander.Header>
+                            </exp:Expander>
 
-                        <exp:Expander x:Name="MyExpander2" IsEnabled="False">
-                            <exp:Expander.Header>
-                                <Grid ColumnDefinitions="Auto,*" Padding="10,0,0,0">
-                                    <Image Grid.Column="0" x:Name="HeaderImage2" HeightRequest="30" WidthRequest="30" Source="downarrow.png">
-                                        <Image.Triggers>
-                                            <DataTrigger TargetType="Image"
+                            <exp:Expander x:Name="MyExpander2" IsEnabled="False">
+                                <exp:Expander.Header>
+                                    <Grid ColumnDefinitions="Auto,*" Padding="10,0,0,0">
+                                        <Image Grid.Column="0" x:Name="HeaderImage2" HeightRequest="30" WidthRequest="30" Source="downarrow.png">
+                                            <Image.Triggers>
+                                                <DataTrigger TargetType="Image"
                                                  Binding="{Binding Source={x:Reference MyExpander2}, Path=IsExpanded}"
                                                  Value="True">
-                                                <Setter Property="Rotation"
+                                                    <Setter Property="Rotation"
                                                 Value="180"/>
-                                            </DataTrigger>
-                                        </Image.Triggers>
-                                    </Image>
-                                    <Label Grid.Column="1" Text="Equal Opportunity Employment" TextColor="Black" FontAttributes="Bold" FontSize="Medium" VerticalOptions="Center" Padding="10"/>
-                                </Grid>
-                            </exp:Expander.Header>
-                        </exp:Expander>
+                                                </DataTrigger>
+                                            </Image.Triggers>
+                                        </Image>
+                                        <Label Grid.Column="1" Text="Equal Opportunity Employment" TextColor="Black" FontAttributes="Bold" FontSize="Medium" VerticalOptions="Center" Padding="10"/>
+                                    </Grid>
+                                </exp:Expander.Header>
+                            </exp:Expander>
 
-                        <exp:Expander x:Name="MyExpander3">
-                            <exp:Expander.Header>
-                                <Grid ColumnDefinitions="Auto,*" Padding="10,0,0,0">
-                                    <Image Grid.Column="0" x:Name="HeaderImage3" HeightRequest="30" WidthRequest="30" Source="downarrow.png">
-                                        <Image.Triggers>
-                                            <DataTrigger TargetType="Image"
+                            <exp:Expander x:Name="MyExpander3">
+                                <exp:Expander.Header>
+                                    <Grid ColumnDefinitions="Auto,*" Padding="10,0,0,0">
+                                        <Image Grid.Column="0" x:Name="HeaderImage3" HeightRequest="30" WidthRequest="30" Source="downarrow.png">
+                                            <Image.Triggers>
+                                                <DataTrigger TargetType="Image"
                                                  Binding="{Binding Source={x:Reference MyExpander3}, Path=IsExpanded}"
                                                  Value="True">
-                                                <Setter Property="Rotation"
+                                                    <Setter Property="Rotation"
                                                 Value="180"/>
-                                            </DataTrigger>
-                                        </Image.Triggers>
-                                    </Image>
-                                    <Label Grid.Column="1" Text="Recruitment And Selection Process" TextColor="Black" FontAttributes="Bold" FontSize="Medium" VerticalOptions="Center" Padding="10"/>
-                                </Grid>
-                            </exp:Expander.Header>
-                            <exp:Expander.Content>
-                                <StackLayout Padding="20,0,0,0">
-                                    <exp:Expander x:Name="MyExpander4">
-                                        <exp:Expander.Header>
-                                            <Grid ColumnDefinitions="Auto,*" Padding="10,0,0,0">
-                                                <Image Grid.Column="0" x:Name="HeaderImage4" HeightRequest="30" WidthRequest="30" Source="downarrow.png">
-                                                    <Image.Triggers>
-                                                        <DataTrigger TargetType="Image"
+                                                </DataTrigger>
+                                            </Image.Triggers>
+                                        </Image>
+                                        <Label Grid.Column="1" Text="Recruitment And Selection Process" TextColor="Black" FontAttributes="Bold" FontSize="Medium" VerticalOptions="Center" Padding="10"/>
+                                    </Grid>
+                                </exp:Expander.Header>
+                                <exp:Expander.Content>
+                                    <StackLayout Padding="20,0,0,0">
+                                        <exp:Expander x:Name="MyExpander4">
+                                            <exp:Expander.Header>
+                                                <Grid ColumnDefinitions="Auto,*" Padding="10,0,0,0">
+                                                    <Image Grid.Column="0" x:Name="HeaderImage4" HeightRequest="30" WidthRequest="30" Source="downarrow.png">
+                                                        <Image.Triggers>
+                                                            <DataTrigger TargetType="Image"
                                                                      Binding="{Binding Source={x:Reference MyExpander4}, Path=IsExpanded}"
                                                                      Value="True">
-                                                            <Setter Property="Rotation"
-                                                                    Value="180"/>
-                                                        </DataTrigger>
-                                                    </Image.Triggers>
-                                                </Image>
-                                                <Label Grid.Column="1" Text="Application" TextColor="Black" FontAttributes="Bold" FontSize="Medium" VerticalOptions="Center" Padding="10"/>
-                                            </Grid>
-                                        </exp:Expander.Header>
-                                        <exp:Expander.Content>
-                                            <StackLayout Padding="40,0,0,0">
-                                                <Label Text="* Qualifying questions" TextColor="Black" FontSize="Medium" Margin="10"/>
-                                                <Label Text="* Help candidates complete your applications" TextColor="Black" FontSize="Medium" Margin="10" LineBreakMode="WordWrap"/>
-                                                <Label Text="* Gamification" TextColor="Black" FontSize="Medium" Margin="10"/>
-                                            </StackLayout>
-                                        </exp:Expander.Content>
-                                    </exp:Expander>
-
-                                    <exp:Expander x:Name="MyExpander5">
-                                        <exp:Expander.Header>
-                                            <Grid ColumnDefinitions="Auto,*" Padding="10,0,0,0">
-                                                <Image Grid.Column="0" x:Name="HeaderImage5" HeightRequest="30" WidthRequest="30" Source="downarrow.png">
-                                                    <Image.Triggers>
-                                                        <DataTrigger TargetType="Image"
-                                                                     Binding="{Binding Source={x:Reference MyExpander5}, Path=IsExpanded}"
-                                                                     Value="True">
-                                                            <Setter Property="Rotation"
+                                                                <Setter Property="Rotation"
                                                                     Value="180"/>
                                                             </DataTrigger>
                                                         </Image.Triggers>
                                                     </Image>
-                                                <Label Grid.Column="1" Text="Screening call" TextColor="Black" FontAttributes="Bold" FontSize="Medium" VerticalOptions="Center" Padding="10"/>
-                                            </Grid>
-                                        </exp:Expander.Header>
-                                        <exp:Expander.Content>
-                                            <StackLayout Margin="50,0,0,0">
-                                                <exp:Expander x:Name="MyExpander9">
-                                                    <exp:Expander.Header>
-                                                        <Grid ColumnDefinitions="Auto,*" Padding="10,0,0,0">
-                                                            <Image Grid.Column="0" x:Name="HeaderImage9" HeightRequest="30" WidthRequest="30" Source="downarrow.png">
-                                                                <Image.Triggers>
-                                                                    <DataTrigger TargetType="Image"
+                                                    <Label Grid.Column="1" Text="Application" TextColor="Black" FontAttributes="Bold" FontSize="Medium" VerticalOptions="Center" Padding="10"/>
+                                                </Grid>
+                                            </exp:Expander.Header>
+                                            <exp:Expander.Content>
+                                                <StackLayout Padding="40,0,0,0">
+                                                    <Label Text="* Qualifying questions" TextColor="Black" FontSize="Medium" Margin="10"/>
+                                                    <Label Text="* Help candidates complete your applications" TextColor="Black" FontSize="Medium" Margin="10" LineBreakMode="WordWrap"/>
+                                                    <Label Text="* Gamification" TextColor="Black" FontSize="Medium" Margin="10"/>
+                                                </StackLayout>
+                                            </exp:Expander.Content>
+                                        </exp:Expander>
+
+                                        <exp:Expander x:Name="MyExpander5">
+                                            <exp:Expander.Header>
+                                                <Grid ColumnDefinitions="Auto,*" Padding="10,0,0,0">
+                                                    <Image Grid.Column="0" x:Name="HeaderImage5" HeightRequest="30" WidthRequest="30" Source="downarrow.png">
+                                                        <Image.Triggers>
+                                                            <DataTrigger TargetType="Image"
+                                                                     Binding="{Binding Source={x:Reference MyExpander5}, Path=IsExpanded}"
+                                                                     Value="True">
+                                                                <Setter Property="Rotation"
+                                                                    Value="180"/>
+                                                            </DataTrigger>
+                                                        </Image.Triggers>
+                                                    </Image>
+                                                    <Label Grid.Column="1" Text="Screening call" TextColor="Black" FontAttributes="Bold" FontSize="Medium" VerticalOptions="Center" Padding="10"/>
+                                                </Grid>
+                                            </exp:Expander.Header>
+                                            <exp:Expander.Content>
+                                                <StackLayout Margin="50,0,0,0">
+                                                    <exp:Expander x:Name="MyExpander9">
+                                                        <exp:Expander.Header>
+                                                            <Grid ColumnDefinitions="Auto,*" Padding="10,0,0,0">
+                                                                <Image Grid.Column="0" x:Name="HeaderImage9" HeightRequest="30" WidthRequest="30" Source="downarrow.png">
+                                                                    <Image.Triggers>
+                                                                        <DataTrigger TargetType="Image"
                                                                              Binding="{Binding Source={x:Reference MyExpander9}, Path=IsExpanded}"
                                                                              Value="True">
-                                                                        <Setter Property="Rotation" 
+                                                                            <Setter Property="Rotation" 
                                                                             Value="180"/>
-                                                                    </DataTrigger>
-                                                                </Image.Triggers>
-                                                            </Image>
-                                                            <Label Grid.Column="1" Text="Expander Stage 4" TextColor="Black" FontAttributes="Bold" FontSize="Medium" VerticalOptions="Center" Padding="10"/>
-                                                        </Grid>
-                                                    </exp:Expander.Header>
-                                                    <exp:Expander.Content>
-                                                        <StackLayout Margin="60,0,0,0">
-                                                            <exp:Expander x:Name="MyExpander10">
-                                                                <exp:Expander.Header>
-                                                                    <Grid ColumnDefinitions="Auto,*" Padding="10,0,0,0">
-                                                                        <Image Grid.Column="0" x:Name="HeaderImage10" HeightRequest="30" WidthRequest="30" Source="downarrow.png">
-                                                                            <Image.Triggers>
-                                                                                <DataTrigger TargetType="Image"
+                                                                        </DataTrigger>
+                                                                    </Image.Triggers>
+                                                                </Image>
+                                                                <Label Grid.Column="1" Text="Expander Stage 4" TextColor="Black" FontAttributes="Bold" FontSize="Medium" VerticalOptions="Center" Padding="10"/>
+                                                            </Grid>
+                                                        </exp:Expander.Header>
+                                                        <exp:Expander.Content>
+                                                            <StackLayout Margin="60,0,0,0">
+                                                                <exp:Expander x:Name="MyExpander10">
+                                                                    <exp:Expander.Header>
+                                                                        <Grid ColumnDefinitions="Auto,*" Padding="10,0,0,0">
+                                                                            <Image Grid.Column="0" x:Name="HeaderImage10" HeightRequest="30" WidthRequest="30" Source="downarrow.png">
+                                                                                <Image.Triggers>
+                                                                                    <DataTrigger TargetType="Image"
                                                                                              Binding="{Binding Source={x:Reference MyExpander10}, Path=IsExpanded}"
                                                                                              Value="True">
-                                                                                    <Setter Property="Rotation"
+                                                                                        <Setter Property="Rotation"
                                                                                             Value="180"/>
-                                                                                </DataTrigger>
-                                                                            </Image.Triggers>
-                                                                        </Image>
-                                                                        <Label Grid.Column="1" Text="Expander Stage 5" TextColor="Black" FontAttributes="Bold" FontSize="Medium" VerticalOptions="Center" Padding="10"/>
-                                                                    </Grid>
-                                                                </exp:Expander.Header>
-                                                                <exp:Expander.Content>
-                                                                    <StackLayout Margin="70,0,0,0">
-                                                                        <exp:Expander x:Name="MyExpander11">
-                                                                            <exp:Expander.Header>
-                                                                                <Grid ColumnDefinitions="Auto,*" Padding="10,0,0,0">
-                                                                                    <Image Grid.Column="0" x:Name="HeaderImage11" HeightRequest="30" WidthRequest="30" Source="downarrow.png">
-                                                                                        <Image.Triggers>
-                                                                                            <DataTrigger TargetType="Image"
+                                                                                    </DataTrigger>
+                                                                                </Image.Triggers>
+                                                                            </Image>
+                                                                            <Label Grid.Column="1" Text="Expander Stage 5" TextColor="Black" FontAttributes="Bold" FontSize="Medium" VerticalOptions="Center" Padding="10"/>
+                                                                        </Grid>
+                                                                    </exp:Expander.Header>
+                                                                    <exp:Expander.Content>
+                                                                        <StackLayout Margin="70,0,0,0">
+                                                                            <exp:Expander x:Name="MyExpander11">
+                                                                                <exp:Expander.Header>
+                                                                                    <Grid ColumnDefinitions="Auto,*" Padding="10,0,0,0">
+                                                                                        <Image Grid.Column="0" x:Name="HeaderImage11" HeightRequest="30" WidthRequest="30" Source="downarrow.png">
+                                                                                            <Image.Triggers>
+                                                                                                <DataTrigger TargetType="Image"
                                                                                                          Binding="{Binding Source={x:Reference MyExpander11}, Path=IsExpanded}"
                                                                                                          Value="True">
-                                                                                                <Setter Property="Rotation"
+                                                                                                    <Setter Property="Rotation"
                                                                                                         Value="180"/>
-                                                                                            </DataTrigger>
-                                                                                        </Image.Triggers>
-                                                                                    </Image>
-                                                                                    <Label Grid.Column="1" Text="Expander stage 6" TextColor="Black" FontAttributes="Bold" FontSize="Medium" VerticalOptions="Center" Padding="10"/>
-                                                                                </Grid>
-                                                                            </exp:Expander.Header>
-                                                                            <exp:Expander.Content>
-                                                                                <StackLayout Margin="80,0,0,0">
-                                                                                    <Label Text="* Here we are trying to show the Expander layers till stage 6" TextColor="Black" FontSize="Medium"/>
-                                                                                </StackLayout>
-                                                                            </exp:Expander.Content>
-                                                                        </exp:Expander>
-                                                                    </StackLayout>
-                                                                </exp:Expander.Content>
-                                                            </exp:Expander>
-                                                        </StackLayout>
-                                                    </exp:Expander.Content>
-                                                </exp:Expander>
-                                            </StackLayout>
-                                        </exp:Expander.Content>
-                                    </exp:Expander>
+                                                                                                </DataTrigger>
+                                                                                            </Image.Triggers>
+                                                                                        </Image>
+                                                                                        <Label Grid.Column="1" Text="Expander stage 6" TextColor="Black" FontAttributes="Bold" FontSize="Medium" VerticalOptions="Center" Padding="10"/>
+                                                                                    </Grid>
+                                                                                </exp:Expander.Header>
+                                                                                <exp:Expander.Content>
+                                                                                    <StackLayout Margin="80,0,0,0">
+                                                                                        <Label Text="* Here we are trying to show the Expander layers till stage 6" TextColor="Black" FontSize="Medium"/>
+                                                                                    </StackLayout>
+                                                                                </exp:Expander.Content>
+                                                                            </exp:Expander>
+                                                                        </StackLayout>
+                                                                    </exp:Expander.Content>
+                                                                </exp:Expander>
+                                                            </StackLayout>
+                                                        </exp:Expander.Content>
+                                                    </exp:Expander>
+                                                </StackLayout>
+                                            </exp:Expander.Content>
+                                        </exp:Expander>
 
-                                    <exp:Expander x:Name="MyExpander6" IsEnabled="False">
+                                        <exp:Expander x:Name="MyExpander6" IsEnabled="False">
                                             <exp:Expander.Header>
-                                                    <Grid ColumnDefinitions="Auto,*" Padding="10,0,0,0">
-                                                        <Image Grid.Column="0" x:Name="HeaderImage6" HeightRequest="30" WidthRequest="30" Source="downarrow.png">
-                                                            <Image.Triggers>
-                                                                <DataTrigger TargetType="Image"
+                                                <Grid ColumnDefinitions="Auto,*" Padding="10,0,0,0">
+                                                    <Image Grid.Column="0" x:Name="HeaderImage6" HeightRequest="30" WidthRequest="30" Source="downarrow.png">
+                                                        <Image.Triggers>
+                                                            <DataTrigger TargetType="Image"
                                                                              Binding="{Binding Source={x:Reference MyExpander6}, Path=IsExpanded}"
                                                                              Value="True">
-                                                                    <Setter Property="Rotation"
+                                                                <Setter Property="Rotation"
                                                                             Value="180"/>
-                                                                </DataTrigger>
-                                                            </Image.Triggers>
-                                                        </Image>
-                                                        <Label Grid.Column="1" Text="In-person interviewing" TextColor="Black" FontAttributes="Bold" FontSize="Medium" VerticalOptions="Center" Padding="10"/>
-                                                    </Grid>
-                                                </exp:Expander.Header>
-                                            </exp:Expander>
+                                                            </DataTrigger>
+                                                        </Image.Triggers>
+                                                    </Image>
+                                                    <Label Grid.Column="1" Text="In-person interviewing" TextColor="Black" FontAttributes="Bold" FontSize="Medium" VerticalOptions="Center" Padding="10"/>
+                                                </Grid>
+                                            </exp:Expander.Header>
+                                        </exp:Expander>
 
-                                    <exp:Expander x:Name="MyExpander7" IsEnabled="False">
-                                        <exp:Expander.Header>
-                                            <Grid ColumnDefinitions="Auto,*" Padding="10,0,0,0">
-                                                <Image Grid.Column="0" x:Name="HeaderImage7" HeightRequest="30" WidthRequest="30" Source="downarrow.png">
-                                                    <Image.Triggers>
-                                                        <DataTrigger TargetType="Image"
+                                        <exp:Expander x:Name="MyExpander7" IsEnabled="False">
+                                            <exp:Expander.Header>
+                                                <Grid ColumnDefinitions="Auto,*" Padding="10,0,0,0">
+                                                    <Image Grid.Column="0" x:Name="HeaderImage7" HeightRequest="30" WidthRequest="30" Source="downarrow.png">
+                                                        <Image.Triggers>
+                                                            <DataTrigger TargetType="Image"
                                                                      Binding="{Binding Source={x:Reference MyExpander7}, Path=IsExpanded}"
                                                                      Value="True">
-                                                            <Setter Property="Rotation"
+                                                                <Setter Property="Rotation"
                                                                     Value="180"/>
-                                                        </DataTrigger>
-                                                    </Image.Triggers>
-                                                </Image>
-                                                <Label Grid.Column="1" Text="Decision and job offer" TextColor="Black" FontAttributes="Bold" FontSize="Medium" VerticalOptions="Center" Padding="10"/>
-                                            </Grid>
-                                        </exp:Expander.Header>
-                                    </exp:Expander>
-                                </StackLayout>
-                            </exp:Expander.Content>
-                        </exp:Expander>
-                    </StackLayout>
-                </exp:Expander.Content>
-            </exp:Expander>
-            
-            <exp:Expander x:Name="MyExpander8" IsEnabled="False">
-                <exp:Expander.Header>
-                    <Grid ColumnDefinitions="Auto,*" Padding="10,0,0,0">
-                        <Image Grid.Column="0" x:Name="HeaderImage8" HeightRequest="30" WidthRequest="30" Source="downarrow.png">
-                            <Image.Triggers>
-                                <DataTrigger TargetType="Image"
+                                                            </DataTrigger>
+                                                        </Image.Triggers>
+                                                    </Image>
+                                                    <Label Grid.Column="1" Text="Decision and job offer" TextColor="Black" FontAttributes="Bold" FontSize="Medium" VerticalOptions="Center" Padding="10"/>
+                                                </Grid>
+                                            </exp:Expander.Header>
+                                        </exp:Expander>
+                                    </StackLayout>
+                                </exp:Expander.Content>
+                            </exp:Expander>
+                        </StackLayout>
+                    </exp:Expander.Content>
+                </exp:Expander>
+
+                <exp:Expander x:Name="MyExpander8" IsEnabled="False">
+                    <exp:Expander.Header>
+                        <Grid ColumnDefinitions="Auto,*" Padding="10,0,0,0">
+                            <Image Grid.Column="0" x:Name="HeaderImage8" HeightRequest="30" WidthRequest="30" Source="downarrow.png">
+                                <Image.Triggers>
+                                    <DataTrigger TargetType="Image"
                                          Binding="{Binding Source={x:Reference MyExpander8}, Path=IsExpanded}"
                                          Value="True">
-                                    <Setter Property="Rotation"
+                                        <Setter Property="Rotation"
                                          Value="180"/>
-                                </DataTrigger>
-                            </Image.Triggers>
-                        </Image>
-                        <Label Grid.Column="1" Text="Screening call" TextColor="Black" FontAttributes="Bold" FontSize="Medium" VerticalOptions="Center" Padding="10"/>
-                    </Grid>
-                </exp:Expander.Header>
-            </exp:Expander>
-        </StackLayout>
-    </ScrollView>
+                                    </DataTrigger>
+                                </Image.Triggers>
+                            </Image>
+                            <Label Grid.Column="1" Text="Screening call" TextColor="Black" FontAttributes="Bold" FontSize="Medium" VerticalOptions="Center" Padding="10"/>
+                        </Grid>
+                    </exp:Expander.Header>
+                </exp:Expander>
+            </StackLayout>
+        </ScrollView>
+        <Grid Grid.Row="1"
+              ColumnDefinitions="0.25*,0.25*,0.25*,0.25*">
+            <Line Grid.Column="1" Stroke="Blue" X2="100" Aspect="Fill" StrokeThickness="3" VerticalOptions="FillAndExpand"/>
+        </Grid>
+    </Grid>
 </ContentPage>

@@ -5,7 +5,7 @@
              Title="LOGO"
              Shell.NavBarIsVisible="False"
              BackgroundColor="White">
-    <Grid RowDefinitions="Auto, Auto, *">
+    <Grid RowDefinitions="Auto, Auto, *,Auto">
         <Label Grid.Row="0"
             Text="LOGO"
             FontSize="Title"
@@ -244,5 +244,9 @@
                 </StackLayout>
             </StackLayout>
         </ScrollView>
+        <Grid Grid.Row="3"
+              ColumnDefinitions="0.25*,0.25*,0.25*,0.25*">
+            <Line Grid.Column="0" Stroke="Blue" X2="100" Aspect="Fill" StrokeThickness="3" VerticalOptions="FillAndExpand"/>
+        </Grid>
     </Grid>
 </ContentPage>
